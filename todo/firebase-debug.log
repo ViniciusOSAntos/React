@@ -1,0 +1,54 @@
+[debug] [2022-09-28T13:56:28.197Z] ----------------------------------------------------------------------
+[debug] [2022-09-28T13:56:28.198Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2022-09-28T13:56:28.199Z] CLI Version:   11.11.0
+[debug] [2022-09-28T13:56:28.199Z] Platform:      darwin
+[debug] [2022-09-28T13:56:28.199Z] Node Version:  v16.14.2
+[debug] [2022-09-28T13:56:28.200Z] Time:          Wed Sep 28 2022 10:56:28 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-09-28T13:56:28.201Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-28T13:56:28.207Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-28T13:56:28.207Z] > authorizing via signed-in user (vini.osantos99@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/vinicius.santos/Documents/JS/React/todo-list
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-09-28T13:56:38.656Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2022-09-28T13:56:38.656Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"todovinii","name":"todovinii"}
+[debug] [2022-09-28T13:56:39.661Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2022-09-28T13:56:39.661Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5015407634623282772"}
+[debug] [2022-09-28T13:56:39.662Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 [none]
+[debug] [2022-09-28T13:56:40.693Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 200
+[debug] [2022-09-28T13:56:40.694Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 {"name":"operations/cp.5015407634623282772"}
+[debug] [2022-09-28T13:56:41.195Z] [Project Creation Poller] Retrying task index 0
+[debug] [2022-09-28T13:56:41.196Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 [none]
+[debug] [2022-09-28T13:56:42.270Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 200
+[debug] [2022-09-28T13:56:42.270Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 {"name":"operations/cp.5015407634623282772","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2022-09-28T13:56:43.272Z] [Project Creation Poller] Retrying task index 0
+[debug] [2022-09-28T13:56:43.272Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 [none]
+[debug] [2022-09-28T13:56:44.335Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 200
+[debug] [2022-09-28T13:56:44.335Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5015407634623282772 {"name":"operations/cp.5015407634623282772","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"424851398187","projectId":"todovinii","lifecycleState":"ACTIVE","name":"todovinii","createTime":"2022-09-28T13:56:39.693Z"}}
+[debug] [2022-09-28T13:56:44.337Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/todovinii:addFirebase [none]
+[debug] [2022-09-28T13:56:45.569Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/todovinii:addFirebase 403
+[debug] [2022-09-28T13:56:45.569Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/todovinii:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-09-28T13:56:45.569Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-09-28T13:56:45.719Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.

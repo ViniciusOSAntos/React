@@ -32,7 +32,10 @@ export default function Home() {
             </div>
           ) }
       </List>
-    </Container> 
+      <a href="https://google.com" target="_blank" rel="noreferrer">
+        Click para teste no GA -> Redireciona pra o Google
+      </a>  
+    </Container>
   )
 }
  
